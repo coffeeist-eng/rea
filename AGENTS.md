@@ -24,7 +24,7 @@ Validate advertised JSON Schemas after SDK conversion against their declared dia
 
 ## Development
 
-Use [.nvmrc](.nvmrc) and `package.json#packageManager` for the pinned toolchain. Cursor Cloud may place older Node.js first on `PATH`; environment setup installs the pinned toolchain under `/usr/local/bin`.
+Use [.nvmrc](.nvmrc) and `package.json#packageManager` for the pinned toolchain. Cursor Cloud may place older Node.js first on `PATH`; environment setup installs the pinned toolchain under `/usr/local/bin`. Claude Code cloud sessions run `.claude/hooks/session-start.sh`, which installs it under `/opt`, prepends it to `PATH`, installs locked dependencies, builds `rea`, and serves the `.mcp.json` MCP server from this checkout.
 
 - `npm ci`: install locked dependencies.
 - `npm run build:cached`: build the runtime and packaged skill.
